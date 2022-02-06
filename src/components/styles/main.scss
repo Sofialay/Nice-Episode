@@ -1,0 +1,38 @@
+.template {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #FFFEFC;
+
+    &.center-column-between {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .link-btn {
+        width: 100%;
+        .btn-default {
+            width: 100%;
+            height: 56px;
+            border-radius: 50px;
+            border: transparent;
+            font-weight: bold;
+            color: #FFFEFC;
+            &.spotify {
+                background: hsl(141,75%,48%);
+            }
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .body-font-lg {
+        font-size: 1.1rem;
+    }
+
+}
