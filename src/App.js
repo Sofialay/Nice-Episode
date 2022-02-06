@@ -4,6 +4,9 @@ import LoginPage from './components/LoginPage/LoginPage'
 import './components/styles/main.scss'
 import './App.css'
 
+// lsof -n -i :3000 | grep LISTEN
+// sudo kill -9 [id]
+
 function App() {
 	const [token, setToken] = useState('')
 	// const [searchKey, setSearchKey] = useState("")
@@ -27,8 +30,6 @@ function App() {
 	}
 
 	// const searchArtists = async(e) => {
-	// 	console.log('LLGA ACA')
-	// 	console.log(searchKey, 'SEARCH KEY')
 	// 	const { data } = await axios.get(`https://api.spotify.com/v1/search` , {
 	// 		headers: {
 	// 			Authorization: `Bearer ${token}`
