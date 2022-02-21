@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LoginPage from './components/LoginPage/LoginPage'
+import Home from './components/Home/Home'
 // import axios from 'axios'
 import './components/styles/main.scss'
 import './App.css'
@@ -9,7 +10,7 @@ import './App.css'
 
 function App() {
 	const [token, setToken] = useState('')
-	// const [searchKey, setSearchKey] = useState("")
+
 	useEffect(() => {
 		const hash = window.location.hash
 		let savetoken = window.localStorage.getItem("token")
@@ -23,40 +24,10 @@ function App() {
 		setToken(savetoken)
 
 	}, [token])
-
-	const logout = () => {
-		setToken("")
-		window.localStorage.removeItem("token")
-	}
-
-	// const searchArtists = async(e) => {
-	// 	const { data } = await axios.get(`https://api.spotify.com/v1/search` , {
-	// 		headers: {
-	// 			Authorization: `Bearer ${token}`
-	// 		},
-	// 		params: {
-	// 			q: searchKey,
-	// 			type: "show"
-	// 		}
-	// 	})
-	// 	console.log(data, 'DATA')
-	// }
 	
 	return (
 		<div className="App">
-			{!token ?
-				<LoginPage />
-			 : 
-				<>
-				Home
-					{/* <form>
-						<input onChange={(e)=> setSearchKey(e.target.value)}></input>
-						<button type='button' onClick={() => searchArtists()}>Search</button>
-					</form>
-					*/}
-					<button onClick={logout}>Log out</button> 
-				</>
-			}
+			{ !token ? <LoginPage /> : <Home setToken={setToken} /> }
 		</div>
 	);
 }
