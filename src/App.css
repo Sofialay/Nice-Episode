@@ -3,13 +3,28 @@ body p, label, span {
 }
 
 body h1 {
-  font-size: 2.75rem;
+  font-size: 2rem;
 }
 
 body h2 {
-  font-size: 2.25rem;
+  font-size: 1.87rem;
 }
 
 body h3 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+svg {
+  color: #404870;
+  font-size: 1.1rem;
+}
+
+button {
+  border: transparent;
+  background-color: transparent;
 }

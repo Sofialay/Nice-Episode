@@ -1,0 +1,13 @@
+.btn {
+    width: 100%;
+    height: 56px;
+    border-radius: 50px;
+    border: transparent;
+    font-weight: bold;
+  
+    &.default {
+        color: #FFFEFC;
+        background: #111826;
+    }
+
+}
